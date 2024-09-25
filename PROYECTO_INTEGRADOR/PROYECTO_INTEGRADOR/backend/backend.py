@@ -17,7 +17,6 @@ def _get_percentage_change(value: Union[int, float], prev_value: Union[int, floa
     return percentage_change
 
 class Customer(rx.Model, table=True):
-    """The customer model."""
 
     name: str
     email: str
@@ -29,7 +28,6 @@ class Customer(rx.Model, table=True):
 
 
 class MonthValues(rx.Base):
-    """Values for a month."""
 
     num_customers: int = 0
     total_payments: float = 0.0
@@ -38,7 +36,6 @@ class MonthValues(rx.Base):
 
 
 class State(rx.State):
-    """The app state."""
 
     users: list[Customer] = []
     sort_value: str = ""
@@ -51,7 +48,6 @@ class State(rx.State):
 
 
     def load_entries(self) -> list[Customer]:
-            """Get all users from the database."""
             with rx.session() as session:
                 query = select(Customer)
                 if self.search_value:
@@ -63,7 +59,6 @@ class State(rx.State):
                                 for field in Customer.get_fields()
                                 if field not in ["id", "payments"]
                             ],
-                            # ensures that payments is cast to a string before applying the ilike operator
                             cast(Customer.payments, String).ilike(search_value)
                         )
                     )
@@ -83,7 +78,6 @@ class State(rx.State):
 
 
     def get_current_month_values(self):
-        """Calculate current month's values."""
         now = datetime.now()
         start_of_month = datetime(now.year, now.month, 1)
         
@@ -97,7 +91,7 @@ class State(rx.State):
 
 
     def get_previous_month_values(self):
-        """Calculate previous month's values."""
+
         now = datetime.now()
         first_day_of_current_month = datetime(now.year, now.month, 1)
         last_day_of_last_month = first_day_of_current_month - timedelta(days=1)
@@ -107,7 +101,6 @@ class State(rx.State):
             user for user in self.users
             if start_of_last_month <= datetime.strptime(user.date, '%Y-%m-%d %H:%M:%S') <= last_day_of_last_month
         ]
-        # We add some dummy values to simulate growth/decline. Remove them in production.
         num_customers = len(previous_month_users) + 3
         total_payments = sum(user.payments for user in previous_month_users) + 240
         num_delivers = len([user for user in previous_month_users if user.status == "Delivered"]) + 5

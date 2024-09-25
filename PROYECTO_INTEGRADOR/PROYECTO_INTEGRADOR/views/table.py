@@ -89,7 +89,7 @@ def add_customer_button() -> rx.Component:
                         ),
                         # Email
                         form_field(
-                            "Email", "user@reflex.dev", "email", "email", "mail"
+                            "Email", "user@email.com", "email", "email", "mail"
                         ),
                         # Phone
                         form_field("Phone", "Customer Phone", "tel", "phone", "phone"),
@@ -212,7 +212,7 @@ def update_customer_dialog(user):
                         # Email
                         form_field(
                             "Email",
-                            "user@reflex.dev",
+                            "user@email.com",
                             "email",
                             "email",
                             "mail",
