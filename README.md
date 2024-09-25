@@ -33,5 +33,5 @@ For support, email <jarycarolinam125@gmail.com>. We love to have you here!
 Ask us!
 
 ##Trello link (Just in Case)
-[![Trello]([https://img.shields.io/badge/GitHub-1DA1F2?style=for-the-badge&logo=Github&logoColor=white)](https://twitter.com/JaryMontoya](https://trello.com/invite/b/66d291c23870c93b3fd7c90b/ATTI965a3ba6ad6b73c09012f5289ab704901C6B622C/proyecto-integrador-order-delivery))
+[![Trello]([https://img.shields.io/badge/Trello-1DA1F2?style=for-the-badge&logo=Github&logoColor=white)](https://trello.com/invite/b/66d291c23870c93b3fd7c90b/ATTI965a3ba6ad6b73c09012f5289ab704901C6B622C/proyecto-integrador-order-delivery))
 
