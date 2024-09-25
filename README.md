@@ -11,7 +11,7 @@ The Order Delivery App, is a web application where users can add clients through
 
 [![Instagram](https://img.shields.io/badge/Instagram-1DA1F2?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/jary_montoya_)
 
-[![GitHub](https://img.shields.io/badge/GitHub-1DA1F2?style=for-the-badge&logo=Github&logoColor=white)](https://twitter.com/JaryMontoya)
+[![GitHub](https://img.shields.io/badge/GitHub-1DA1F2?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/JaryMontoya)
 
 ## Features
 
